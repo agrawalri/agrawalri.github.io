@@ -1,0 +1,71 @@
+{
+    "name": "riya-agrawal-portfolio",
+    "version": "1.0.0",
+    "description": "Riya Agrawal's portfolio, built on the open-source Next.js portfolio template by Utkarsh Singhal and Chenwan Halley Zhong.",
+    "homepage": "https://agrawalri.github.io/",
+    "author": {
+        "name": "Riya Agrawal",
+        "url": "https://agrawalri.github.io/"
+    },
+    "contributors": [
+        {
+            "name": "Utkarsh Singhal",
+            "email": "singhalutkarsh26@gmail.com",
+            "url": "https://utkarsh-singhal.is-a.dev/"
+        },
+        {
+            "name": "Chenwan Halley Zhong",
+            "email": "halleyscomet678@gmail.com",
+            "url": "https://halleyscomet-99.github.io/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/agrawalri/agrawalri.github.io.git"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format:write": "prettier --write \"**/*.{ts,tsx}\" --cache",
+        "format:check": "prettier --check \"**/*.{ts,tsx}\" --cache",
+        "type:check": "tsc --noEmit --pretty"
+    },
+    "dependencies": {
+        "@base-ui/react": "^1.0.0",
+        "@radix-ui/react-slot": "^1.2.4",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "date-fns": "^4.1.0",
+        "framer-motion": "^12.25.0",
+        "gray-matter": "^4.0.3",
+        "gsap": "^3.14.2",
+        "lucide-react": "^0.562.0",
+        "next": "16.1.1",
+        "next-mdx-remote": "^6.0.0",
+        "next-themes": "^0.4.6",
+        "prettier": "^3.7.4",
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3",
+        "tailwind-merge": "^3.4.0",
+        "tailwindcss-animate": "^1.0.7"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.18",
+        "@types/node": "^25.0.6",
+        "@types/react": "^19.2.8",
+        "@types/react-dom": "^19.2.3",
+        "eslint": "^9.39.2",
+        "eslint-config-next": "16.1.1",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^4.1.18",
+        "typescript": "^5.9.3"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}

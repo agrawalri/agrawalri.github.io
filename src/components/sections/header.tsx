@@ -1,0 +1,86 @@
+"use client";
+
+import { Github, Linkedin, Youtube, Mail } from "lucide-react";
+
+import { MovingElement } from "@/components/navbar";
+
+export function Header({ data }: { data: Record<string, string> }) {
+    const handleChange = (url: string) => {
+        window.open(url, "_blank");
+    };
+
+    return (
+        <div className="w-full">
+            <div className="space-y-2">
+                <p className="font-normal text-muted-foreground text-base">
+                    hi there👋, I&apos;m
+                </p>
+
+                <div>
+                    <h1 className="font-bold text-primary/90 text-4xl tracking-tight">
+                        {data.NAME}
+                    </h1>
+                    <h2 className="flex flex-col gap-0 font-normal text-primary/90 text-base">
+                        <p>{data.LOCATION}</p>
+                        <p>{data.HEADLINE}</p>
+                    </h2>
+                </div>
+
+                <SocialRow data={data} onOpen={handleChange} />
+            </div>
+
+            <h2 className="mt-6 font-medium text-primary/90 text-base">
+                about me.
+            </h2>
+            <p className="flex flex-col gap-2 mt-4 font-normal text-muted-foreground text-base text-justify">
+                <span>{data.INTRO}</span>
+            </p>
+        </div>
+    );
+}
+
+/** Resume button + icon links. Icons with an empty link are hidden. */
+export function SocialRow({
+    data,
+    onOpen,
+    iconSize,
+}: {
+    data: Record<string, string>;
+    onOpen: (url: string) => void;
+    iconSize?: number;
+}) {
+    return (
+        <div className="flex items-center gap-2 text-sm">
+            <MovingElement
+                className="inline-flex justify-center items-center bg-primary betterhover:hover:bg-primary/90 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring h-9 font-medium text-primary-foreground text-sm whitespace-nowrap transition-colors disabled:pointer-events-none"
+                change={() => onOpen(data.RESUME)}
+                toChange={false}
+                ariaLabel="Resume"
+            >
+                Resume
+            </MovingElement>
+            <div className="flex gap-2">
+                {data.EMAIL && (
+                    <MovingElement change={() => onOpen(data.EMAIL)} ariaLabel="Email">
+                        <Mail size={iconSize} />
+                    </MovingElement>
+                )}
+                {data.GITHUB && (
+                    <MovingElement change={() => onOpen(data.GITHUB)} ariaLabel="Github">
+                        <Github size={iconSize} />
+                    </MovingElement>
+                )}
+                {data.LINKEDIN && (
+                    <MovingElement change={() => onOpen(data.LINKEDIN)} ariaLabel="Linkedin">
+                        <Linkedin size={iconSize} />
+                    </MovingElement>
+                )}
+                {data.YOUTUBE && (
+                    <MovingElement change={() => onOpen(data.YOUTUBE)} ariaLabel="Youtube">
+                        <Youtube size={iconSize} />
+                    </MovingElement>
+                )}
+            </div>
+        </div>
+    );
+}

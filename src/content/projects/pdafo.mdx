@@ -1,0 +1,50 @@
+{/* ============================================================
+    HOW TO ADD PICTURES / VIDEOS ON THIS PAGE
+    1. Put the file in:  public/media/projects/pdafo/
+    2. Remove the comment markers (the curly-brace slash-star at the
+       start and star-slash curly-brace at the end) around a block
+       below, and change the file name to match yours.
+    See README.md for every block you can use.
+   ============================================================ */}
+
+## The problem
+
+Passive dynamic ankle-foot orthoses (PDAFOs) support people with weakness around the ankle, but the struts that set their stiffness come in a limited range. A strut that is too stiff or too flexible changes how someone walks. My goal was a strut whose rotational stiffness could be adjusted to the user and that reaches beyond the range of motion of commercial struts.
+
+{/* <Diagram src="/media/projects/pdafo/concept.jpg" caption="Adjustable-stiffness strut concept" size="lg" /> */}
+
+---
+
+## Design & analysis
+
+I led the design of customizable, adjustable-stiffness strut geometries and verified each one with finite element analysis in **Abaqus**, checking deformation under stress and physiological loading before committing to a prototype.
+
+{/* <DiagramPair
+  leftSrc="/media/projects/pdafo/cad.png"
+  leftCaption="CAD model"
+  rightSrc="/media/projects/pdafo/fea.png"
+  rightCaption="Abaqus FEA under physiological loading"
+/> */}
+
+---
+
+## Prototyping & mechanical testing
+
+- Machined **aluminum and steel** prototypes on the mill and lathe
+- Tested them on an **Instron** system under differential loading conditions
+- Correlated measured rotational stiffness with FEA predictions and published literature targets
+
+{/* <VideoPair
+  leftSrc="/media/projects/pdafo/machining.mp4"
+  leftCaption="Machining a prototype"
+  rightSrc="/media/projects/pdafo/instron.mp4"
+  rightCaption="Instron stiffness test"
+/> */}
+
+---
+
+## Testing with people
+
+I ran verification and user-performance testing through **human subject gait analysis** in a simulated walking environment and compared the results with normative gait data.
+
+{/* <Video src="/media/projects/pdafo/gait.mp4" caption="Gait testing in the simulated walking environment" size="lg" /> */}

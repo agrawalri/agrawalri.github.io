@@ -1,0 +1,30 @@
+{/* Add media: put files in public/media/projects/haptic-paddle/ and uncomment a block below. See README.md. */}
+
+## System
+
+A motorized haptic paddle that pushes back on your hand with programmable force. It combines an **RC servo**, a **DRV8833 H-bridge** motor driver, a **load cell** for force sensing, and an **AS5600 magnetic encoder** for position.
+
+{/* <Diagram src="/media/projects/haptic-paddle/system.png" caption="Hardware block diagram" size="lg" /> */}
+
+---
+
+## Firmware
+
+I programmed **Raspberry Pi Pico** and **STM32** microcontrollers in C and CircuitPython:
+
+- Sensor interfacing over **I²C and SPI**
+- **PWM** motor actuation
+- Current sensing for real-time electromechanical control
+
+---
+
+## Rendering touch
+
+I wrote Python graphics to visualize paddle position and force in real time, then designed force–displacement profiles that make the paddle feel like **bumps, detents, and toggle switches**.
+
+{/* <VideoPair
+  leftSrc="/media/projects/haptic-paddle/demo.mp4"
+  leftCaption="Paddle demo"
+  rightSrc="/media/projects/haptic-paddle/plot.mp4"
+  rightCaption="Live position and force plot"
+/> */}
